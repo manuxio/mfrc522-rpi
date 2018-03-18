@@ -413,9 +413,11 @@ class MFRC522 {
       }
       response = this.appendCRCtoBufferAndSendToCard(buffer);
       if (response.status) {
-        console.log("Data written successfully");
+        // console.log("Data written successfully");
+        return response;
       }
     }
+    return false;
   }
 }
 
